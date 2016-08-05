@@ -1,0 +1,35 @@
+.productswrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.inputs > input {
+  margin: 3px;
+}
+
+.productbutton {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+/*.header {
+  display: flex;
+}*/
+
+.getProductsButton {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.delete-button {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+}

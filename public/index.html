@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>ecommerce</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller='homeCtrl'>
+
+    <!-- <header class='header'>
+      <button class='getProductsButton' type="button" name="button" ng-click="getAllProducts()">CLICK ME TO SEE PRODUCTS</button>
+    </header> -->
+
+    <section class='productswrapper'>
+      <div class="stuff" ng-repeat='stuff in products'>
+        <ul>
+          <li>ID: {{stuff.id}}</li>
+          <li>Name: {{stuff.name}}</li>
+          <li>Price: {{stuff.price}}</li>
+          <li>Type: {{stuff.type}}</li>
+          <li>Description: {{stuff.description}}</li>
+        </ul>
+        <button class='delete-button' type="button" name="button" ng-click='deleteProduct(stuff.id)'>Remove</button>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class='inputs'>
+      <input type="text" name="name" value="" ng-model="newProduct.name">
+      <input type="text" name="name" value="" ng-model="newProduct.description">
+      <input type="text" name="name" value="" ng-model="newProduct.price">
+      <input type="text" name="name" value="" ng-model="newProduct.type">
+    </section>
+
+      <button class="productbutton" type="button" name="button" ng-click='addProduct(newProduct)'>Add Product</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src='./app/app.module.js'></script>
+    <script src='./app/component/home/homeCtrl.js'></script>
+    <script src='./app/component/home/homeSrvc.js'></script>
+  </body>
+</html>
